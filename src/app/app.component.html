@@ -1,0 +1,28 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Resto App</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" id="nav-link" routerLink="add">Add Rest</a>
+      </li>
+      <!-- <li class="nav-item">
+        <a class="nav-link" routerLink="update">update Resto</a>
+      </li> -->
+      <li class="nav-item">
+        <a class="nav-link" routerLink="list">list Resto</a>
+      </li>
+      <li class="nav-item">
+      <a class="nav-link" routerLink="login">login Resto</a>
+      </li>
+      <li class="nav-item">
+      <a class="nav-link" routerLink="register">register Resto</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>

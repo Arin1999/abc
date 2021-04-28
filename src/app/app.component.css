@@ -1,0 +1,20 @@
+
+  /* visited link */
+  nav a:visited {
+    color: #00FF00;
+  }
+  
+  /* mouse over link */
+  nav  a:hover {
+    color: #FF00FF;
+  }
+  
+  /* selected link */
+  nav a:active {
+    color: #0000FF;
+  }
+  nav a:host{
+    border: 2px solid dimgray;
+    display: block;
+    padding: 20px;
+  }

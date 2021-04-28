@@ -1,0 +1,36 @@
+<form [formGroup]="addResto" (ngSubmit)="collectResto()">
+    <div class="form-group">
+      <label>name</label>
+      <input type="text" class="form-control" formControlName="name"> 
+        <span class="error"  *ngIf="name.touched && name.invalid && name.errors.required">name is required</span>
+        <span class="error"  *ngIf="name.touched && name.invalid && name.errors.minlength">
+            name must be 5 characters long, we need another
+            {{
+                name.errors.minlength.requiredLength -
+                name.errors.minlength.actualLength
+            }}
+            characters
+        </span>
+    </div>
+    <div class="form-group">
+        <label>address</label>
+        <input type="text" class="form-control" formControlName="address">
+        <span class="error"  *ngIf="address.touched && address.invalid && address.errors.required">address is required</span>
+        <span class="error"  *ngIf="address.touched && address.invalid && address.errors.maxlength">
+            address can be 50 characters long, you added extra 
+            {{
+                address.errors.maxlength.actualLength-
+                address.errors.maxlength.requiredLength
+                
+            }}
+            characters
+        </span>
+    </div>
+    <div class="form-group">
+        <label>email</label>
+        <input type="email" class="form-control" formControlName="email">
+        <span class="error"  *ngIf="email.touched && email.invalid && email.errors.required">email is required</span>
+        <span class="error"  *ngIf="email.touched && email.invalid && email.errors.email">Enter valid email address</span>
+    </div>
+    <button [disabled]="addResto.invalid" type="submit" class="btn btn-primary">Submit</button>
+</form>

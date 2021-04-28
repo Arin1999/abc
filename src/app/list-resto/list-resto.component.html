@@ -1,0 +1,27 @@
+<div>
+  <label>Pick a highlight color : </label>
+  <input type="radio" name="colors" (click)="color='lightgreen'">Green
+  <input type="radio" name="colors" (click)="color='yellow'">Yellow
+  <input type="radio" name="colors" (click)="color='cyan'">Cyan
+</div>
+<table  class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">name</th>
+        <th scope="col">address</th>
+        <th scope="col">email</th> 
+        <th scope="col">Action</th> 
+      </tr>
+    </thead>
+    <tbody>
+    <tr [appHighlight]="color" *ngFor="let item of collection">
+            <th>{{ item.id}}</th>
+            <th>{{ item.name}}</th>
+            <th>{{ item.address}}</th>
+            <th>{{ item.email}}</th>
+            <th><i (click)="deleteResto(item.id)" class="fa fa-trash" style="font-size:20px;color:red;"></i></th>
+            <a routerLink="/update/{{item.id}}"><i class="fa fa-edit" style="font-size:20px;color:blue;"></i></a>
+    </tr>
+    </tbody> 
+  </table>

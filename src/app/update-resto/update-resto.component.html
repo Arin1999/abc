@@ -1,0 +1,15 @@
+<form [formGroup]="editResto" (ngSubmit)="collection()">
+    <div class="form-group">
+      <label>name</label>
+      <input type="text" class="form-control" formControlName="name"> 
+    </div>
+    <div class="form-group">
+        <label>address</label>
+        <input type="text" class="form-control" formControlName="address">
+    </div>
+    <div class="form-group">
+        <label>email</label>
+        <input type="email" class="form-control" formControlName="email">
+    </div>
+    <button type="submit" class="btn btn-primary">Update</button>
+</form>
