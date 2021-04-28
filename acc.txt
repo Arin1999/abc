@@ -1,3 +1,6 @@
+<<<<<<< HEAD
 abc
 afghjkl
 asd
+=======
+>>>>>>> parent of ff9c13e (a1)
